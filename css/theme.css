@@ -32,8 +32,12 @@ li {
 #header {
 	position: relative;
 	z-index: 100;
+	min-height: 4.6em !important;
 }
-
+.active{
+	background-color: #008fe2;
+	color: #fff;
+}
 #header .header-body {
 	background: #FFF;
 	border-top: 5px solid #0092e3;
