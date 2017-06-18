@@ -52,7 +52,16 @@
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 	</head>
 	<body data-spy="scroll">
-
+		<!-- use this for popup-->
+		<div id="boxes">
+			<div style="top: 199.5px; left: 551.5px; display: none;margin-top:2.5em;" id="dialog" class="window"><div style="padding:10px">Happy Father's Day</div>
+				<div id="lorem">
+					<img src="https://scontent.fhyd2-1.fna.fbcdn.net/v/t1.0-9/19145826_1911291559108259_3339379335009689125_n.png?oh=efd9dbc77aab17bb47c43a245d27832e&oe=59D1EB9F" style="width:100%;height:100%;">
+				</div>
+				<div id="popupfoot"> <a href="http://tapadiadiagnostics.com/" class="close agree" style="color:red;margin-bottom:10px;">Close </div>
+			</div>
+			<div style="width: 1478px; font-size: 32pt; color:white; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
+		</div>
 		<div class="body">
 			<header id="header" class="header-narrow">
 				<div class="header-body">
@@ -116,6 +125,16 @@
 					</div>
 				</div>
 			</header>
+			<div class="container">
+				<div class="row text-center">
+
+
+				</div>
+			</div>
+
+
+
+
 
 			<div role="main" class="main">
 
@@ -483,7 +502,52 @@
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
 
+<script>
+$(document).ready(function() {
 
+		var id = '#dialog';
+
+		//Get the screen height and width
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+
+		//Set heigth and width to mask to fill up the whole screen
+		$('#mask').css({'width':maskWidth,'height':maskHeight});
+
+		//transition effect
+		$('#mask').fadeIn(500);
+		$('#mask').fadeTo("slow",0.9);
+
+		//Get the window height and width
+		var winH = $(window).height();
+		var winW = $(window).width();
+
+		//Set the popup window to center
+		$(id).css('top',  winH/2-$(id).height()/2);
+		$(id).css('left', winW/2-$(id).width()/2);
+
+		//transition effect
+		$(id).fadeIn(2000);
+
+	//if close button is clicked
+	$('.window .close').click(function (e) {
+		//Cancel the link behavior
+		e.preventDefault();
+
+		$('#mask').hide();
+		$('.window').hide();
+	});
+
+	//if mask is clicked
+	$('#mask').click(function () {
+		$(this).hide();
+		$('.window').hide();
+	});
+
+});
+
+
+</script>
 
 
 		<script>
