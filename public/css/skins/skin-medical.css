@@ -4792,6 +4792,7 @@ ul.comments .comment-block,
 }
 
 .thumbnail {
+	height: 250px;
 	display: block;
 	padding: 4px;
 	margin-bottom: 20px;
