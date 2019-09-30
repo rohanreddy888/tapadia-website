@@ -51,8 +51,29 @@
 
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#myModal").modal('show');
+			});
+		</script>
 	</head>
 	<body data-spy="scroll">
+			<div id="myModal" class="modal fade">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title">Anniversary Offer's</h4>
+							</div>
+							<div class="modal-body">
+						<img class="img-responsive" src="img/offers.png">
+
+							</div>
+						</div>
+					</div>
+				</div>
 		<div class="body">
 			<header id="header" class="header-narrow">
 				<div class="header-body">
@@ -460,11 +481,9 @@
 		</div>
 
 		<!-- Vendor -->
-		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
 		<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
 		<script src="vendor/jquery-cookie/jquery-cookie.min.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 		<script src="vendor/common/common.min.js"></script>
 		<script src="vendor/jquery.validation/jquery.validation.min.js"></script>
 		<script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
